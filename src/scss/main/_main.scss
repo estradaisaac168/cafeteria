@@ -1,0 +1,40 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.main {
+
+    background-color: v.$white;
+    padding: 5rem 2rem;
+
+    @include m.tablet {
+        padding: 10rem;
+        margin-top: -10rem;
+        position: relative;
+    }
+
+}
+
+.about {
+
+    &__h2 {
+        color: v.$primaryColor;
+
+
+        &::after {
+            content: '';
+            display: block;
+            width: 10rem;
+            height: 10rem;
+            margin: 0 auto;
+            background-image: url(../img/cafe.svg);
+            background-size: 10rem;
+        }
+
+    }
+
+    &__span {
+        color: v.$secondaryColor;
+        font-size: 1.8rem;
+        display: block;
+    }
+}

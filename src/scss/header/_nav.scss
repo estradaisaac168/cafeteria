@@ -1,0 +1,43 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+@use 'sass:math';
+
+
+.nav {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+
+    @include m.tablet {
+        flex-direction: row;
+        gap: math.div(v.$gap, 4);
+        margin-top: 0;
+
+    }
+
+
+    &__link {
+        color: v.$white;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 1rem;
+
+        &--active{
+            color: v.$secondaryColor;
+        }
+
+        &:hover{
+            color: v.$secondaryColor;
+        }
+
+        @include m.tablet {
+            font-size: 1.8rem;
+            margin-bottom: 0;
+        }
+    }
+}

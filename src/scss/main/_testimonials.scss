@@ -1,0 +1,33 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.testimonials{
+
+    padding: 10rem 2rem;
+
+    @include m.tablet { 
+        padding: 10rem;
+    }
+
+    margin-top: -10rem;
+    background-color: v.$white;
+
+    &__content{
+        background-color: v.$brownLight;
+        padding: 2rem 4rem;
+        max-width: 50rem;
+        margin: 0 auto;
+        border-radius: 1rem;
+    }
+
+    &__text{
+        text-align: justify;
+    }
+
+    &__author{
+        text-align: right;
+        font-size: 2.4rem;
+        color: v.$primaryColor;
+        font-family: v.$coursiveFont;
+    }
+}

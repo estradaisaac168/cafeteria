@@ -1,0 +1,25 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.icons {
+
+    margin-top: 5rem;
+
+    &__content {
+        @include m.tablet { 
+            @include m.grid(3, v.$gap);
+        }
+    }
+
+
+    &__img {
+        margin: 0 auto;
+        width: 12rem;
+    }
+
+    &__text {
+        font-family: v.$coursiveFont;
+        font-size: 3.2rem;
+        color: v.$primaryColor;
+    }
+}

@@ -1,0 +1,92 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.menu {
+
+    background-image: url(../img/menu_arriba.svg), url(../img/menu_abajo.svg), linear-gradient(to top, v.$primaryColor, v.$primaryColor);
+    padding: 15rem 1rem 15rem 1rem;
+    background-repeat: no-repeat;
+    background-position: center 5rem, center 95%, center center;
+    background-size: 200%;
+
+    @include m.tablet {
+        padding: 15rem 0 20rem 0;
+        background-size: 70%, 70%, 100%;
+    }
+
+    @include m.desktop {
+        background-size: 60%, 60%, 100%;
+    }
+
+    &__h2 {
+        color: v.$white;
+    }
+
+    &__span {
+        color: v.$white;
+        display: block;
+    }
+
+    &__grid {
+        @include m.tablet {
+            @include m.grid(2, 2rem);
+        }
+    }
+
+    &__items {
+        &--coffe {
+            //    padding: 0 0 5rem 0;
+            margin-bottom: 2rem;
+        }
+
+        &--food {
+            margin-bottom: 13rem;
+        }
+
+        @include m.tablet {
+
+            &--coffe {
+                //    padding: 0 0 5rem 0;
+                margin-bottom: 0;
+            }
+
+            &--food {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__h3 {
+        color: v.$white;
+    }
+
+    &__li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__p {
+        color: v.$white;
+        font-size: 2.2rem;
+        line-height: 1.5;
+        margin: 0 0 .5rem 1rem;
+
+        &--span {
+            color: v.$secondaryColor;
+            display: block;
+        }
+    }
+
+    &__price {
+        color: v.$white;
+        font-size: 4rem;
+        margin: 1rem 1rem 0 2rem;
+        font-weight: 700;
+
+        @include m.tablet { 
+            margin: 2rem 2rem 0 2rem;
+        }
+    }
+
+}
